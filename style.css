@@ -1,0 +1,126 @@
+body {
+    background-color: rgb(1, 0, 0);
+    color: rgb(252, 248, 11);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-size: 25px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    position: relative;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.border-right {
+    border-right: 2px solid palegreen;
+}
+
+.border-bottom {
+    border-bottom: 2px solid palegreen;
+}
+
+.line {
+    background-color: brown;
+    position: absolute;
+}
+
+.line-row-1 {
+    height: 2px;
+    width: 100%;
+    top: 16%;
+}
+
+.line-row-2 {
+    height: 2px;
+    width: 100%;
+    top: 49%;
+}
+
+.line-row-3 {
+    height: 2px;
+    width: 100%;
+    top: 83%;
+}
+
+.line-column-1 {
+    width: 2px;
+    height: 100%;
+    left: 16%;
+}
+
+.line-column-2 {
+    width: 2px;
+    height: 100%;
+    left: 49%;
+}
+
+.line-column-3 {
+    width: 2px;
+    height: 100%;
+    left: 83%;
+}
+
+.line-diagonal-1 {
+    width: 90%;
+    height: 2px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.line-diagonal-2 {
+    width: 90%;
+    height: 2px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+.game-over-container {
+    margin-top: 40px;
+    padding: 0 20px 20px 20px;
+    border: 2px solid palegreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restart {
+    width: 100px;
+    height: 30px;
+    color: rgb(252, 248, 11);
+    border: 2px solid rgb(252, 248, 11);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.visible {
+    display: inline-flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.x-hover:hover::after{
+    content: "X";
+    opacity: 0.4;
+    position: absolute;
+}
+
+.o-hover:hover::after{
+    content: "O";
+    opacity: 0.4;
+    position: absolute;
+}
